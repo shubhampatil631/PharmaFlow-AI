@@ -1,0 +1,654 @@
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>Repurposing Report: Metformin</title>
+            <style>
+                @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+                
+                :root {
+                    --primary: #0F172A;
+                    --secondary: #334155;
+                    --accent: #2563EB;
+                    --accent-light: #EFF6FF;
+                    --text-body: #475569;
+                    --border: #E2E8F0;
+                }
+
+                @page { margin: 0; size: A4; }
+                
+                body {
+                    font-family: 'Inter', sans-serif;
+                    color: var(--text-body);
+                    line-height: 1.5;
+                    margin: 0;
+                    background: #fff;
+                    font-size: 10pt;
+                }
+
+                .page {
+                    position: relative;
+                    width: 210mm;
+                    margin: 0 auto;
+                    background: white;
+                    padding: 0;
+                    overflow: visible;
+                    border-bottom: 1px solid #eee; /* Preview separator */
+                    page-break-after: always;
+                }
+                
+                @media print {
+                    .page { width: 100%; border: none; }
+                }
+
+                /* Layouts */
+                .content-wrapper { padding: 40px 50px 100px 50px; }
+                .cols-2 { display: flex; gap: 40px; justify-content: space-between; }
+                .cols-2 > div { flex: 1; box-sizing: border-box; }
+                .grid-3 { display: flex; gap: 20px; justify-content: space-between; }
+                .grid-3 > div { flex: 1; box-sizing: border-box; }
+
+                /* Text */
+                h1 { font-size: 24pt; color: var(--primary); margin: 0; line-height: 1.2; }
+                h2 { font-size: 16pt; color: var(--primary); border-bottom: 2px solid var(--border); padding-bottom: 10px; margin-top: 40px; margin-bottom: 25px; }
+                h3 { font-size: 12pt; color: var(--secondary); font-weight: 600; margin-top: 25px; margin-bottom: 10px; }
+                p { margin-bottom: 12px; text-align: justify; }
+
+                /* Components */
+                .header { display: flex; justify-content: space-between; border-bottom: 2px solid var(--primary); padding-bottom: 15px; margin-bottom: 30px; }
+                .footer { display: flex; justify-content: space-between; font-size: 8pt; color: #94A3B8; border-top: 1px solid var(--border); padding-top: 15px; margin-top: 50px; page-break-inside: avoid; }
+                
+                table { width: 100%; border-collapse: collapse; font-size: 9pt; margin-bottom: 20px; }
+                th { text-align: left; background: var(--primary); color: white; padding: 10px; font-weight: 500; font-size: 8pt; text-transform: uppercase; }
+                td { padding: 10px; border-bottom: 1px solid var(--border); vertical-align: top; }
+                tr:nth-child(even) { background: #F8FAFC; }
+
+                .metric-card { background: var(--accent-light); padding: 20px; border-radius: 8px; border-left: 4px solid var(--accent); }
+                .metric-val { font-size: 20pt; font-weight: 700; color: var(--primary); margin-top: 5px; }
+                .metric-lbl { font-size: 9pt; text-transform: uppercase; color: var(--secondary); font-weight: 600; }
+
+                .tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 8pt; font-weight: 600; }
+                .tag-green { background: #DCFCE7; color: #166534; }
+                .tag-blue { background: #DBEAFE; color: #1E40AF; }
+                .tag-red { background: #FEE2E2; color: #991B1B; }
+
+                /* Cover specific */
+                .cover { display: flex; min-height: 296mm; }
+                .cover-side { width: 80mm; flex-shrink: 0; background: var(--primary); color: white; padding: 60px 40px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between; }
+                .cover-main { flex: 1; padding: 80px 50px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: center; }
+            </style>
+        </head>
+        <body>
+            
+            <!-- PAGE 1: COVER -->
+            <div class="page text-gray-900">
+                <div class="cover">
+                    <div class="cover-side">
+                        <div>
+                            <div style="font-size: 16pt; font-weight: 700; border-bottom: 2px solid var(--accent); padding-bottom: 20px; margin-bottom: 40px;">PHARMAFLOW INTELLIGENCE</div>
+                            <div style="margin-bottom: 30px;">
+                                <div style="font-size: 8pt; opacity: 0.7; text-transform: uppercase;">Report Type</div>
+                                <div style="font-size: 12pt; font-weight: 500;">Comprehensive Repurposing Scan</div>
+                            </div>
+                            <div style="margin-bottom: 30px;">
+                                <div style="font-size: 8pt; opacity: 0.7; text-transform: uppercase;">Molecule</div>
+                                <div style="font-size: 12pt; font-weight: 500;">Metformin</div>
+                            </div>
+                            <div>
+                                <div style="font-size: 8pt; opacity: 0.7; text-transform: uppercase;">Date</div>
+                                <div style="font-size: 12pt; font-weight: 500;">2026-02-24</div>
+                            </div>
+                        </div>
+                        <div style="font-size: 9pt; opacity: 0.5;">Confidential & Proprietary<br>Generated by PharmaFlow AI System</div>
+                    </div>
+                    <div class="cover-main">
+                        <div style="width: 8px; height: 100px; background: var(--accent); margin-bottom: 30px;"></div>
+                        <h1 style="font-size: 36pt; letter-spacing: -1px; margin-bottom: 20px; overflow-wrap: break-word; word-break: break-word; line-height: 1.1;">Metformin</h1>
+                        <div style="font-size: 20pt; color: var(--secondary); font-weight: 300;">Strategic Analysis & Market Viability Report</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PAGE 2: EXECUTIVE SUMMARY -->
+            <div class="page">
+                <div class="content-wrapper">
+                    <div class="header">
+                        <div class="header-title" style="font-size: 20pt; font-weight: 700; color: var(--primary);">Executive Briefing</div>
+                        <div style="text-align: right; color: var(--secondary);">Page 2</div>
+                    </div>
+
+                    <div class="grid-3" style="margin-bottom: 40px;">
+                        
+                        <div class="metric-card">
+                            <div class="metric-lbl">Market Maturity</div>
+                            <div class="metric-val" style="font-size: 14pt;">Mature</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-lbl">Vendor Availability</div>
+                            <div class="metric-val" style="font-size: 14pt;">5 Public Vendors</div>
+                        </div>
+                        
+                        <div class="metric-card">
+                            <div class="metric-lbl">Patent Status</div>
+                            <div class="metric-val" style="font-size: 11pt; margin-top: 12px; line-height: 1.2;">
+                                
+                                    Metformin is currently generic, as its patent expired many years ago.
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>Key Findings</h2>
+                    <div style="background: #f8fafc; padding: 25px; border-left: 5px solid var(--primary); margin-bottom: 30px; border-radius: 4px;">
+                        <p style="font-size: 11pt; color: #1e293b; white-space: pre-wrap;"><strong>Summary:</strong> Metformin is a well-established, generic medication with a long history of use, primarily in the treatment of type 2 diabetes mellitus. Its patent has expired, leading to widespread availability from multiple manufacturers. The current clinical landscape for Metformin includes three active trials investigating its potential in treating various conditions beyond its primary indication, such as depression, childhood obesity, gestational diabetes mellitus, schizophrenia, and type 2 diabetes mellitus. The diversity of these conditions suggests a growing interest in the repurposing of Metformin. Furthermore, there have been five recent publications related to Metformin, indicating ongoing research and scientific interest in the drug. Given its generic status and the maturity of the market, any strategic consideration for Metformin must take into account the challenges of differentiation and the need for novel intellectual property (IP) to create a competitive edge.</p>
+                    </div>
+
+                    <div class="cols-2">
+                        <div>
+                            <h3>Strategic Drivers</h3>
+                            <ul style="padding-left: 20px;">
+                                
+                                    
+                                    <li style="margin-bottom: 8px;">Repurposing potentials</li>
+                                    
+                                
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>Critical Risks</h3>
+                            <ul style="padding-left: 20px; color: #b91c1c;">
+                                
+                                    
+                                    <li style="margin-bottom: 8px;">Regulatory changes</li>
+                                    
+                                
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="footer">
+                        <div>CONFIDENTIAL • Metformin</div>
+                        <div>Page 2</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PAGE 3: MARKET INTELLIGENCE -->
+            <div class="page">
+                <div class="content-wrapper">
+                    <div class="header">
+                        <div class="header-title" style="font-size: 20pt; font-weight: 700; color: var(--primary);">Market Intelligence</div>
+                        <div style="text-align: right; color: var(--secondary);">Page 3</div>
+                    </div>
+
+                    <h2>Market Structure</h2>
+                    
+                    <p style="font-size: 11pt; border-left: 3px solid var(--accent); padding-left: 15px;">
+                        Metformin is a mature generic drug, with its patent having expired long ago. It is widely available in the market from multiple manufacturers.
+                    </p>
+                    
+
+                    <h2>Key Global Manufacturers</h2>
+                    <p>Major players identified in this therapeutic area:</p>
+                    
+                    <ul style="columns: 2;">
+                        
+                        <li style="margin-bottom: 10px; font-weight: 500;">Bristol-Myers Squibb (originator)</li>
+                        
+                        <li style="margin-bottom: 10px; font-weight: 500;">Teva Pharmaceutical Industries</li>
+                        
+                        <li style="margin-bottom: 10px; font-weight: 500;">Mylan N.V.</li>
+                        
+                        <li style="margin-bottom: 10px; font-weight: 500;">Sandoz International GmbH</li>
+                        
+                        <li style="margin-bottom: 10px; font-weight: 500;">Lupin Limited</li>
+                        
+                    </ul>
+                    
+
+                    <div class="footer">
+                        <div>CONFIDENTIAL • Metformin</div>
+                        <div>Page 3</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- PAGE 4: SCIENTIFIC LITERATURE -->
+            <div class="page">
+                <div class="content-wrapper">
+                    <div class="header">
+                        <div class="header-title" style="font-size: 20pt; font-weight: 700; color: var(--primary);">Scientific Literature Review</div>
+                        <div style="text-align: right; color: var(--secondary);">Page 4</div>
+                    </div>
+
+                    <h2>Key Publications</h2>
+                    <p>The following peer-reviewed articles were identified as high-relevance for the repurposing hypothesis:</p>
+                    
+                    
+                        
+                        <div style="margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 15px;">
+                            <div style="font-weight: 600; color: var(--accent); margin-bottom: 4px;">Comparing SGLT2i and Other Oral Antidiabetic Drugs as Dual Therapy Add-On to Metformin in Type 2 Diabetes: A Systematic Review and Meta-Analysis.</div>
+                            <div style="font-size: 8pt; color: #64748B; margin-bottom: 6px;">Endocrinology, diabetes & metabolism • 2026 • PMID: 41676958</div>
+                            <div style="font-size: 9pt; color: #334155; font-style: italic;">“<h4>Aims</h4>To compare up-to-date efficacy and safety data of sodium-glucose cotransporter-2 inhibitors (SGLT-2is) versus other metformin-containing oral dual-therapies (ODTs) in type 2 diabetes...”</div>
+                        </div>
+                        
+                        <div style="margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 15px;">
+                            <div style="font-weight: 600; color: var(--accent); margin-bottom: 4px;">Oxygen-dependent dynamics of metformin biodegradation at the sediment-water interface and non-additive effects on prokaryotic communities.</div>
+                            <div style="font-size: 8pt; color: #64748B; margin-bottom: 6px;">Environmental pollution (Barking, Essex : 1987) • 2026 • PMID: 41722724</div>
+                            <div style="font-size: 9pt; color: #334155; font-style: italic;">“Metformin, a widely prescribed antidiabetic drug, is frequently detected in aquatic environments due to its limited removal during wastewater treatment. Yet its environmental behaviour and...”</div>
+                        </div>
+                        
+                        <div style="margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 15px;">
+                            <div style="font-weight: 600; color: var(--accent); margin-bottom: 4px;">Metformin suppresses MEN1-associated pancreatic and pituitary neuroendocrine tumors: evidence from mouse models and clinical data.</div>
+                            <div style="font-size: 8pt; color: #64748B; margin-bottom: 6px;">Endocrine-related cancer • 2026 • PMID: 41568565</div>
+                            <div style="font-size: 9pt; color: #334155; font-style: italic;">“Pancreatic neuroendocrine tumors (PanNETs) represent a rare subset of pancreatic cancers, comprising approximately 1-2% of all cases. Non-functioning PanNETs (NF-PanNETs), which account for the...”</div>
+                        </div>
+                        
+                        <div style="margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 15px;">
+                            <div style="font-weight: 600; color: var(--accent); margin-bottom: 4px;">Genome-wide CRISPR Screening Reveals a PKA-Driven Resistance Mechanism to Metformin for Oral Cancer Prevention That Can Be Exploited by Combination with NSAIDs.</div>
+                            <div style="font-size: 8pt; color: #64748B; margin-bottom: 6px;">Cancer prevention research (Philadelphia, Pa.) • 2026 • PMID: 41416398</div>
+                            <div style="font-size: 9pt; color: #334155; font-style: italic;">“Head and neck squamous cell carcinoma (HNSCC) is among the 10 most common cancers worldwide and is associated with high morbidity and poor survival. Diminished HNSCC outcomes are often related to...”</div>
+                        </div>
+                        
+                        <div style="margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 15px;">
+                            <div style="font-weight: 600; color: var(--accent); margin-bottom: 4px;">Effect of metformin dose reduction versus continuation at imeglimin initiation on glycemic control in type 2 diabetes: a retrospective real-world analysis.</div>
+                            <div style="font-size: 8pt; color: #64748B; margin-bottom: 6px;">Acta diabetologica • 2026 • PMID: 41661272</div>
+                            <div style="font-size: 9pt; color: #334155; font-style: italic;">“<h4>Aims</h4>To evaluate whether continuing versus reducing metformin at imeglimin initiation is associated with 24-week changes in HbA1c and body weight in routine practice, and to describe...”</div>
+                        </div>
+                        
+                    
+
+                    <div class="footer">
+                        <div>CONFIDENTIAL • Metformin</div>
+                        <div>Page 4</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PAGE 5: CLINICAL TRIALS -->
+            <div class="page">
+                <div class="content-wrapper">
+                    <div class="header">
+                        <div class="header-title" style="font-size: 20pt; font-weight: 700; color: var(--primary);">Clinical Development</div>
+                        <div style="text-align: right; color: var(--secondary);">Page 5</div>
+                    </div>
+
+                    <h2>Active & Recruiting Trials</h2>
+                    
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="width: 40%">Study Title</th>
+                                <th>NCT ID</th>
+                                <th>Phase</th>
+                                <th>Status</th>
+                                <th>Conditions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            <tr>
+                                <td>Study to Assess the Efficacy and Safety of Liraglutide in the...</td>
+                                <td><a href="https://clinicaltrials.gov/study/NCT04373967" target="_blank" style="color: var(--accent); text-decoration: none;">NCT04373967</a></td>
+                                <td>PHASE3</td>
+                                <td>
+                                    <span class="tag tag-blue">UNKNOWN</span>
+                                </td>
+                                <td>Type 2 Diabetes</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>To Compare the Effects of Herbal Medicines With Traditional...</td>
+                                <td><a href="https://clinicaltrials.gov/study/NCT06515652" target="_blank" style="color: var(--accent); text-decoration: none;">NCT06515652</a></td>
+                                <td>NA</td>
+                                <td>
+                                    <span class="tag tag-blue">RECRUITING</span>
+                                </td>
+                                <td>Metabolic Syndrome</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>Metformin for the Prevention of the Metabolic Side-effects of Zyprexa</td>
+                                <td><a href="https://clinicaltrials.gov/study/NCT00682448" target="_blank" style="color: var(--accent); text-decoration: none;">NCT00682448</a></td>
+                                <td>PHASE4</td>
+                                <td>
+                                    <span class="tag tag-blue">COMPLETED</span>
+                                </td>
+                                <td>Metabolic Complications</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>Study of Clinical Response to Acute Metformin By Leveraging...</td>
+                                <td><a href="https://clinicaltrials.gov/study/NCT02087826" target="_blank" style="color: var(--accent); text-decoration: none;">NCT02087826</a></td>
+                                <td>NA</td>
+                                <td>
+                                    <span class="tag tag-blue">ACTIVE_NOT_RECRUITING</span>
+                                </td>
+                                <td>Genetics, Metabolism, Type 2 Diabetes</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>Pilot Trial of Chromium-Metformin Combination in Type 2 Diabetes</td>
+                                <td><a href="https://clinicaltrials.gov/study/NCT00332085" target="_blank" style="color: var(--accent); text-decoration: none;">NCT00332085</a></td>
+                                <td>PHASE1</td>
+                                <td>
+                                    <span class="tag tag-blue">TERMINATED</span>
+                                </td>
+                                <td>Type 2 Diabetes</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>A Phase 1 Clinical Trial to Investigate Pharmacokinetics and Drug...</td>
+                                <td><a href="https://clinicaltrials.gov/study/NCT01526317" target="_blank" style="color: var(--accent); text-decoration: none;">NCT01526317</a></td>
+                                <td>PHASE1</td>
+                                <td>
+                                    <span class="tag tag-blue">COMPLETED</span>
+                                </td>
+                                <td>Pharmacokinetics and Drug...</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>Gene Expression Profiles and Metformin Efficacy in Type 2 Diabetes</td>
+                                <td><a href="https://clinicaltrials.gov/study/NCT01334684" target="_blank" style="color: var(--accent); text-decoration: none;">NCT01334684</a></td>
+                                <td>NA</td>
+                                <td>
+                                    <span class="tag tag-blue">UNKNOWN</span>
+                                </td>
+                                <td>Type 2 Diabetes</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>Adding an Insulin-Sensitizing Medication to Depression Treatment...</td>
+                                <td><a href="https://clinicaltrials.gov/study/NCT00834652" target="_blank" style="color: var(--accent); text-decoration: none;">NCT00834652</a></td>
+                                <td>PHASE4</td>
+                                <td>
+                                    <span class="tag tag-blue">COMPLETED</span>
+                                </td>
+                                <td>Depression</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>A Clinical Trial to Study the Efficacy, Safety, Tolerability and...</td>
+                                <td><a href="https://clinicaltrials.gov/study/NCT01674348" target="_blank" style="color: var(--accent); text-decoration: none;">NCT01674348</a></td>
+                                <td>PHASE2</td>
+                                <td>
+                                    <span class="tag tag-blue">TERMINATED</span>
+                                </td>
+                                <td>Type 2 Diabetes Mellitus</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>Glycemic Excursions in Type 2 Diabetic Patients With Vildagliptin...</td>
+                                <td><a href="https://clinicaltrials.gov/study/NCT02007278" target="_blank" style="color: var(--accent); text-decoration: none;">NCT02007278</a></td>
+                                <td>PHASE4</td>
+                                <td>
+                                    <span class="tag tag-blue">COMPLETED</span>
+                                </td>
+                                <td>Type 2 Diabetes, Hypoglycemia</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>Impact of Metformin on Immuno-virologic Parameters in HIV</td>
+                                <td><a href="https://clinicaltrials.gov/study/NCT04500678" target="_blank" style="color: var(--accent); text-decoration: none;">NCT04500678</a></td>
+                                <td>PHASE2, PHASE3</td>
+                                <td>
+                                    <span class="tag tag-blue">UNKNOWN</span>
+                                </td>
+                                <td>HIV/AIDS</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>Molecular Mechanisms and Carotid Atherosclerosis</td>
+                                <td><a href="https://clinicaltrials.gov/study/NCT03962686" target="_blank" style="color: var(--accent); text-decoration: none;">NCT03962686</a></td>
+                                <td>N/A</td>
+                                <td>
+                                    <span class="tag tag-blue">COMPLETED</span>
+                                </td>
+                                <td>Diabetes Mellitus, Type 2,...</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>Anti-diabetic Drugs and Fatty Liver Management</td>
+                                <td><a href="https://clinicaltrials.gov/study/NCT05041673" target="_blank" style="color: var(--accent); text-decoration: none;">NCT05041673</a></td>
+                                <td>NA</td>
+                                <td>
+                                    <span class="tag tag-blue">UNKNOWN</span>
+                                </td>
+                                <td>Fatty Liver, Nonalcoholic, Diabetes...</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>A Study in Participants With Type 2 Diabetes Mellitus (AWARD-2)</td>
+                                <td><a href="https://clinicaltrials.gov/study/NCT01075282" target="_blank" style="color: var(--accent); text-decoration: none;">NCT01075282</a></td>
+                                <td>PHASE3</td>
+                                <td>
+                                    <span class="tag tag-blue">COMPLETED</span>
+                                </td>
+                                <td>Diabetes Mellitus, Type 2</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>JanUmet Before Insulin Lantus In Eastern Population Evaluation...</td>
+                                <td><a href="https://clinicaltrials.gov/study/NCT01269996" target="_blank" style="color: var(--accent); text-decoration: none;">NCT01269996</a></td>
+                                <td>PHASE4</td>
+                                <td>
+                                    <span class="tag tag-blue">COMPLETED</span>
+                                </td>
+                                <td>Type 2 Diabetes Mellitus</td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                    
+                    
+                    <h2>Recruitment Analysis</h2>
+                    <p>Overview of the current recruitment status across identified studies.</p>
+                    
+                    <ul>
+                        
+                        <li><strong>UNKNOWN:</strong> 7 studies</li>
+                        
+                        <li><strong>RECRUITING:</strong> 3 studies</li>
+                        
+                        <li><strong>COMPLETED:</strong> 30 studies</li>
+                        
+                        <li><strong>ACTIVE_NOT_RECRUITING:</strong> 1 studies</li>
+                        
+                        <li><strong>TERMINATED:</strong> 8 studies</li>
+                        
+                        <li><strong>NOT_YET_RECRUITING:</strong> 1 studies</li>
+                        
+                    </ul>
+                    
+
+                    <div class="footer">
+                        <div>CONFIDENTIAL • Metformin</div>
+                        <div>Page 5</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PAGE 6: PATENT LANDSCAPE -->
+            <div class="page">
+                <div class="content-wrapper">
+                    <div class="header">
+                        <div class="header-title" style="font-size: 20pt; font-weight: 700; color: var(--primary);">Intellectual Property & Legal</div>
+                        <div style="text-align: right; color: var(--secondary);">Page 6</div>
+                    </div>
+
+                    <h2>Core Patent Status</h2>
+                    
+                    <div style="background: #F8FAFC; padding: 20px; margin-bottom: 30px; border-radius: 4px;">
+                        <div class="cols-2">
+                            <div>
+                                <div class="metric-lbl">Primary Patent</div>
+                                <div style="font-size: 12pt; font-weight: 600;">Pioneer/Historical Patent</div>
+                            </div>
+                            <div>
+                                <div class="metric-lbl">Expiry</div>
+                                <div style="font-size: 12pt; font-weight: 600;">1975</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                    <h3>Patent Family Landscape</h3>
+                    
+                    
+                     <h3>Claims Analysis</h3>
+                    
+                    <ul>
+                    
+                        <li style="margin-bottom: 8px;">
+                            <strong>Composition of Matter:</strong> Determined by Expiry — <span style="font-style: italic;">Broad synthesis claims, specifically for the biguanide class of compounds</span>
+                        </li>
+                    
+                    </ul>
+                    
+
+                    <div class="footer">
+                        <div>CONFIDENTIAL • Metformin</div>
+                        <div>Page 6</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PAGE 7: SUPPLY CHAIN -->
+            <div class="page">
+                <div class="content-wrapper">
+                    <div class="header">
+                        <div class="header-title" style="font-size: 20pt; font-weight: 700; color: var(--primary);">Global Supply Chain</div>
+                        <div style="text-align: right; color: var(--secondary);">Page 7</div>
+                    </div>
+
+                   <h2>Registered Vendors (PubChem)</h2>
+                   <p>Publicly listed chemical vendors and suppliers:</p>
+                   
+                   <table>
+                        <thead>
+                            <tr>
+                                <th>Vendor Name</th>
+                                <th>Source Type</th>
+                                <th>Verified</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            <tr>
+                                <td style="font-weight: 600;">Mylan</td>
+                                <td>Major Global Supplier</td>
+                                <td>
+                                    <span class="tag tag-gray">LLM Synthesized</span>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td style="font-weight: 600;">Teva Pharmaceutical Industries</td>
+                                <td>Major Global Supplier</td>
+                                <td>
+                                    <span class="tag tag-gray">LLM Synthesized</span>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td style="font-weight: 600;">Sandoz</td>
+                                <td>Major Global Supplier</td>
+                                <td>
+                                    <span class="tag tag-gray">LLM Synthesized</span>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td style="font-weight: 600;">Aurobindo Pharma</td>
+                                <td>Major Global Supplier</td>
+                                <td>
+                                    <span class="tag tag-gray">LLM Synthesized</span>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td style="font-weight: 600;">Dr. Reddy's Laboratories</td>
+                                <td>Major Global Supplier</td>
+                                <td>
+                                    <span class="tag tag-gray">LLM Synthesized</span>
+                                </td>
+                            </tr>
+                            
+                        </tbody>
+                   </table>
+                   
+
+
+
+                    <div class="footer">
+                        <div>CONFIDENTIAL • Metformin</div>
+                        <div>Page 7</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PAGE 8: STRATEGIC CONCLUSIONS -->
+            <div class="page">
+                <div class="content-wrapper">
+                    <div class="header">
+                        <div class="header-title" style="font-size: 20pt; font-weight: 700; color: var(--primary);">Strategic Conclusions</div>
+                        <div style="text-align: right; color: var(--secondary);">Page 8</div>
+                    </div>
+
+                    <h2>SWOT Analysis</h2>
+                    
+                    <div class="cols-2" style="margin-bottom: 30px;">
+                        <div style="background: #f1f5f9; padding: 20px; border-radius: 4px;">
+                            <h3 style="margin-top:0; color: #0f172a;">Strengths</h3>
+                            <ul style="margin: 0; padding-left: 20px;">
+                                <li>Targeting mitochondrially encoded NADH:ubiquinone oxidoreductase core subunit 6</li><li>Targeting NADH:ubiquinone oxidoreductase subunit A10</li>
+                            </ul>
+                        </div>
+                        <div style="background: #fff1f2; padding: 20px; border-radius: 4px;">
+                            <h3 style="margin-top:0; color: #991b1b;">Weaknesses</h3>
+                            <ul style="margin: 0; padding-left: 20px;">
+                                <li>Requires competitive pricing analysis</li>
+                            </ul>
+                        </div>
+                         <div style="background: #f0fdf4; padding: 20px; border-radius: 4px;">
+                            <h3 style="margin-top:0; color: #166534;">Opportunities</h3>
+                            <ul style="margin: 0; padding-left: 20px;">
+                                <li>Repurposing potentials</li>
+                            </ul>
+                        </div>
+                         <div style="background: #fefce8; padding: 20px; border-radius: 4px;">
+                            <h3 style="margin-top:0; color: #854d0e;">Threats</h3>
+                            <ul style="margin: 0; padding-left: 20px;">
+                                <li>Regulatory changes</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+
+                    <h2>Final Recommendation</h2>
+                    <div style="background: #f8fafc; padding: 25px; border-radius: 8px; border-left: 5px solid var(--accent); margin-bottom: 30px;">
+                        <p style="font-size: 11pt; line-height: 1.6; color: #1e293b; margin: 0; white-space: pre-wrap;">
+                            Considering the active trials and recent publications, there is a clear interest in repurposing Metformin for various indications. However, given the drug's generic status and the competitive landscape, any recommendation for strategic investment must be cautious. The presence of three active trials suggests that there is some potential for Metformin in new therapeutic areas, but the fact that it is a mature generic drug means that differentiation will be difficult without new IP, such as novel formulations or combination therapies. Therefore, any strategic move should focus on creating value through innovation rather than relying solely on the existing molecule. Since there are active trials, it might be viable to consider supporting or investing in Phase II trials for the most promising indications, provided the results from the current trials are positive and there is a clear path to obtaining new IP. However, if the active trials were to cease or show negative results, it would be prudent to reconsider and potentially shift focus towards pre-clinical or feasibility studies to explore entirely new uses or formulations of Metformin. It is crucial to approach this with a skeptical mindset, recognizing that the evidence must be robust to justify significant investment in a drug that, while widely used and respected, faces significant market competition as a generic. The development of new IP, such as sustained-release formulations, combination products, or novel delivery systems, could offer a pathway to differentiation and renewed competitiveness in the market.
+                        </p>
+                    </div>
+
+                    <div style="margin-top: 60px; border-top: 1px solid #ccc; padding-top: 20px; display: flex; justify-content: space-between;">
+                        <div>
+                            <strong>Approved By:</strong><br><br>__________________________<br>Chief Scientific Officer
+                        </div>
+                        <div>
+                            <strong>Date:</strong><br><br>__________________________
+                        </div>
+                    </div>
+
+                    <div class="footer">
+                        <div>CONFIDENTIAL • Metformin</div>
+                        <div>Page 8</div>
+                    </div>
+                </div>
+            </div>
+
+        </body>
+        </html>
+        

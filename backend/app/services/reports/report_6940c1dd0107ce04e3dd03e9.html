@@ -1,0 +1,708 @@
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>Repurposing Report: TestMolecule (Report Verify)</title>
+            <style>
+                @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+                
+                :root {
+                    --primary: #0F172A;
+                    --secondary: #334155;
+                    --accent: #2563EB;
+                    --accent-light: #EFF6FF;
+                    --text-body: #475569;
+                    --border: #E2E8F0;
+                }
+
+                @page { margin: 0; size: A4; }
+                
+                body {
+                    font-family: 'Inter', sans-serif;
+                    color: var(--text-body);
+                    line-height: 1.5;
+                    margin: 0;
+                    background: #fff;
+                    font-size: 10pt;
+                }
+
+                .page {
+                    position: relative;
+                    width: 210mm;
+                    min-height: 297mm;
+                    margin: 0 auto;
+                    background: white;
+                    padding: 0;
+                    overflow: hidden;
+                    border-bottom: 1px solid #eee; /* Preview separator */
+                    page-break-after: always;
+                }
+                
+                @media print {
+                    .page { width: 100%; height: 297mm; border: none; }
+                }
+
+                /* Layouts */
+                .content-wrapper { padding: 40px 50px 60px 50px; }
+                .cols-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+                .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+
+                /* Text */
+                h1 { font-size: 24pt; color: var(--primary); margin: 0; line-height: 1.2; }
+                h2 { font-size: 16pt; color: var(--primary); border-bottom: 2px solid var(--border); padding-bottom: 10px; margin-top: 40px; margin-bottom: 25px; }
+                h3 { font-size: 12pt; color: var(--secondary); font-weight: 600; margin-top: 25px; margin-bottom: 10px; }
+                p { margin-bottom: 12px; text-align: justify; }
+
+                /* Components */
+                .header { display: flex; justify-content: space-between; border-bottom: 2px solid var(--primary); padding-bottom: 15px; margin-bottom: 30px; }
+                .footer { position: absolute; bottom: 30px; left: 50px; right: 50px; display: flex; justify-content: space-between; font-size: 8pt; color: #94A3B8; border-top: 1px solid var(--border); padding-top: 15px; }
+                
+                table { width: 100%; border-collapse: collapse; font-size: 9pt; margin-bottom: 20px; }
+                th { text-align: left; background: var(--primary); color: white; padding: 10px; font-weight: 500; font-size: 8pt; text-transform: uppercase; }
+                td { padding: 10px; border-bottom: 1px solid var(--border); vertical-align: top; }
+                tr:nth-child(even) { background: #F8FAFC; }
+
+                .metric-card { background: var(--accent-light); padding: 20px; border-radius: 8px; border-left: 4px solid var(--accent); }
+                .metric-val { font-size: 20pt; font-weight: 700; color: var(--primary); margin-top: 5px; }
+                .metric-lbl { font-size: 9pt; text-transform: uppercase; color: var(--secondary); font-weight: 600; }
+
+                .tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 8pt; font-weight: 600; }
+                .tag-green { background: #DCFCE7; color: #166534; }
+                .tag-blue { background: #DBEAFE; color: #1E40AF; }
+                .tag-red { background: #FEE2E2; color: #991B1B; }
+
+                /* Cover specific */
+                .cover { display: grid; grid-template-columns: 80mm 1fr; height: 100%; }
+                .cover-side { background: var(--primary); color: white; padding: 60px 40px; display: flex; flex-direction: column; justify-content: space-between; }
+                .cover-main { padding: 80px 50px; display: flex; flex-direction: column; justify-content: center; }
+            </style>
+        </head>
+        <body>
+            
+            <!-- PAGE 1: COVER -->
+            <div class="page text-gray-900">
+                <div class="cover">
+                    <div class="cover-side">
+                        <div>
+                            <div style="font-size: 16pt; font-weight: 700; border-bottom: 2px solid var(--accent); padding-bottom: 20px; margin-bottom: 40px;">GEN_Z INTELLIGENCE</div>
+                            <div style="margin-bottom: 30px;">
+                                <div style="font-size: 8pt; opacity: 0.7; text-transform: uppercase;">Report Type</div>
+                                <div style="font-size: 12pt; font-weight: 500;">Comprehensive Repurposing Scan</div>
+                            </div>
+                            <div style="margin-bottom: 30px;">
+                                <div style="font-size: 8pt; opacity: 0.7; text-transform: uppercase;">Molecule</div>
+                                <div style="font-size: 12pt; font-weight: 500;">TestMolecule (Report Verify)</div>
+                            </div>
+                            <div>
+                                <div style="font-size: 8pt; opacity: 0.7; text-transform: uppercase;">Date</div>
+                                <div style="font-size: 12pt; font-weight: 500;">2025-12-16</div>
+                            </div>
+                        </div>
+                        <div style="font-size: 9pt; opacity: 0.5;">Confidential & Proprietary<br>Generated by Gen_Z AI Agent System</div>
+                    </div>
+                    <div class="cover-main">
+                        <div style="width: 8px; height: 100px; background: var(--accent); margin-bottom: 30px;"></div>
+                        <h1 style="font-size: 48pt; letter-spacing: -2px; margin-bottom: 20px;">TestMolecule (Report Verify)</h1>
+                        <div style="font-size: 20pt; color: var(--secondary); font-weight: 300;">Strategic Analysis & Market Viability Report</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PAGE 2: EXECUTIVE SUMMARY -->
+            <div class="page">
+                <div class="content-wrapper">
+                    <div class="header">
+                        <div class="header-title" style="font-size: 20pt; font-weight: 700; color: var(--primary);">Executive Briefing</div>
+                        <div style="text-align: right; color: var(--secondary);">Page 2</div>
+                    </div>
+
+                    <div class="grid-3" style="margin-bottom: 40px;">
+                        
+                        <div class="metric-card">
+                            <div class="metric-lbl">Est. Market Size (2030)</div>
+                            <div class="metric-val">$1200M</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-lbl">CAGR Forecast</div>
+                            <div class="metric-val" style="color: #16a34a;">12.5%</div>
+                        </div>
+                        
+                        <div class="metric-card">
+                            <div class="metric-lbl">Patent Status</div>
+                            <div class="metric-val" style="font-size: 14pt; margin-top: 12px;">Clear Path</div>
+                        </div>
+                    </div>
+
+                    <h2>Key Findings</h2>
+                    <div style="background: #f8fafc; padding: 25px; border-left: 5px solid var(--primary); margin-bottom: 30px; border-radius: 4px;">
+                        <p style="font-size: 11pt; color: #1e293b;"><strong>Summary:</strong> This is a mock summary for verification purposes. The molecule shows strong potential.</p>
+                    </div>
+
+                    <div class="cols-2">
+                        <div>
+                            <h3>Strategic Drivers</h3>
+                            <ul style="padding-left: 20px;">
+                                
+                                    
+                                    <li style="margin-bottom: 8px;">Pediatric orphan indication</li>
+                                    
+                                    <li style="margin-bottom: 8px;">Emerging markets expansion</li>
+                                    
+                                    <li style="margin-bottom: 8px;">Combination therapy</li>
+                                    
+                                
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>Critical Risks</h3>
+                            <ul style="padding-left: 20px; color: #b91c1c;">
+                                
+                                    
+                                    <li style="margin-bottom: 8px;">New mechanism of action competitors</li>
+                                    
+                                    <li style="margin-bottom: 8px;">Regulatory price controls</li>
+                                    
+                                
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="footer">
+                        <div>CONFIDENTIAL • TestMolecule (Report Verify)</div>
+                        <div>Page 2</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PAGE 3: MARKET INTELLIGENCE -->
+            <div class="page">
+                <div class="content-wrapper">
+                    <div class="header">
+                        <div class="header-title" style="font-size: 20pt; font-weight: 700; color: var(--primary);">Market Intelligence</div>
+                        <div style="text-align: right; color: var(--secondary);">Page 3</div>
+                    </div>
+
+                    <h2>Market Growth Forecast</h2>
+                    
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Year</th>
+                                <th>Projected Revenue ($M)</th>
+                                <th>YoY Growth</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            <tr>
+                                <td>2024</td>
+                                <td>$450</td>
+                                <td>5.2%</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>2025</td>
+                                <td>$510</td>
+                                <td>13.3%</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>2026</td>
+                                <td>$580</td>
+                                <td>13.7%</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>2027</td>
+                                <td>$660</td>
+                                <td>13.8%</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>2028</td>
+                                <td>$750</td>
+                                <td>13.6%</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>2029</td>
+                                <td>$850</td>
+                                <td>13.3%</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>2030</td>
+                                <td>$960</td>
+                                <td>12.9%</td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                    
+
+                    <h2>Competitive Landscape</h2>
+                    
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Competitor</th>
+                                <th>Product</th>
+                                <th>Market Share</th>
+                                <th>Strategic Posture</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            <tr>
+                                <td style="font-weight: 600;">BigPharma Corp</td>
+                                <td>BlockbusterX</td>
+                                <td>35%</td>
+                                <td>Defensive pricing</td>
+                            </tr>
+                            
+                            <tr>
+                                <td style="font-weight: 600;">BioGenIc</td>
+                                <td>BioBios</td>
+                                <td>20%</td>
+                                <td>Niche formulation</td>
+                            </tr>
+                            
+                            <tr>
+                                <td style="font-weight: 600;">GenericCo</td>
+                                <td>GenX</td>
+                                <td>15%</td>
+                                <td>Low cost leader</td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                    
+
+                    <div class="footer">
+                        <div>CONFIDENTIAL • TestMolecule (Report Verify)</div>
+                        <div>Page 3</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- PAGE 4: SCIENTIFIC LITERATURE -->
+            <div class="page">
+                <div class="content-wrapper">
+                    <div class="header">
+                        <div class="header-title" style="font-size: 20pt; font-weight: 700; color: var(--primary);">Scientific Literature Review</div>
+                        <div style="text-align: right; color: var(--secondary);">Page 4</div>
+                    </div>
+
+                    <h2>Key Publications</h2>
+                    <p>The following peer-reviewed articles were identified as high-relevance for the repurposing hypothesis:</p>
+                    
+                    
+                        
+                        <div style="margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 15px;">
+                            <div style="font-weight: 600; color: var(--accent); margin-bottom: 4px;">Novel mechanisms of MolX in Rare Disease A</div>
+                            <div style="font-size: 8pt; color: #64748B; margin-bottom: 6px;">Nature Medicine • 2023 • PMID: 34567890</div>
+                            <div style="font-size: 9pt; color: #334155; font-style: italic;">“We describe a novel pathway interaction...”</div>
+                        </div>
+                        
+                        <div style="margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 15px;">
+                            <div style="font-weight: 600; color: var(--accent); margin-bottom: 4px;">Clinical outcomes of MolX</div>
+                            <div style="font-size: 8pt; color: #64748B; margin-bottom: 6px;">NEJM • 2022 • PMID: 23456789</div>
+                            <div style="font-size: 9pt; color: #334155; font-style: italic;">“A randomized controlled trial showing efficacy...”</div>
+                        </div>
+                        
+                        <div style="margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 15px;">
+                            <div style="font-weight: 600; color: var(--accent); margin-bottom: 4px;">Safety profile in pediatric use</div>
+                            <div style="font-size: 8pt; color: #64748B; margin-bottom: 6px;">Pediatrics • 2022 • PMID: 87654321</div>
+                            <div style="font-size: 9pt; color: #334155; font-style: italic;">“Retrospective analysis of 500 patients...”</div>
+                        </div>
+                        
+                        <div style="margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 15px;">
+                            <div style="font-weight: 600; color: var(--accent); margin-bottom: 4px;">Formulation strategies for bioavailability</div>
+                            <div style="font-size: 8pt; color: #64748B; margin-bottom: 6px;">J. Pharm. Sci. • 2021 • PMID: 11223344</div>
+                            <div style="font-size: 9pt; color: #334155; font-style: italic;">“Nanoparticle approach improves AUC by 50%...”</div>
+                        </div>
+                        
+                    
+
+                    <div class="footer">
+                        <div>CONFIDENTIAL • TestMolecule (Report Verify)</div>
+                        <div>Page 4</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PAGE 5: CLINICAL TRIALS -->
+            <div class="page">
+                <div class="content-wrapper">
+                    <div class="header">
+                        <div class="header-title" style="font-size: 20pt; font-weight: 700; color: var(--primary);">Clinical Development</div>
+                        <div style="text-align: right; color: var(--secondary);">Page 5</div>
+                    </div>
+
+                    <h2>Active & Recruiting Trials</h2>
+                    
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="width: 40%">Study Title</th>
+                                <th>Phase</th>
+                                <th>Status</th>
+                                <th>Conditions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            <tr>
+                                <td>Phase 2 Study of MolX in Pediatric Patients</td>
+                                <td>Phase 2</td>
+                                <td>
+                                    <span class="tag tag-green">Recruiting</span>
+                                </td>
+                                <td>Rare Disorder A</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>Safety and Efficacy in Adults</td>
+                                <td>Phase 3</td>
+                                <td>
+                                    <span class="tag tag-blue">Completed</span>
+                                </td>
+                                <td>Common Disorder B</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>Bioequivalence Study</td>
+                                <td>Phase 1</td>
+                                <td>
+                                    <span class="tag tag-blue">Completed</span>
+                                </td>
+                                <td>Healthy Volunteers</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>Long-term extension study</td>
+                                <td>Phase 3</td>
+                                <td>
+                                    <span class="tag tag-blue">Active, not recruiting</span>
+                                </td>
+                                <td>Common Disorder B</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>New Formulation PK Study</td>
+                                <td>Phase 1</td>
+                                <td>
+                                    <span class="tag tag-green">Recruiting</span>
+                                </td>
+                                <td>Healthy Volunteers</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>Efficacy in Elderly Population</td>
+                                <td>Phase 2</td>
+                                <td>
+                                    <span class="tag tag-blue">Withdrawn</span>
+                                </td>
+                                <td>Common Disorder B</td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                    
+                    
+                    <h2>Recruitment Analysis</h2>
+                    <p>Overview of the current recruitment status across identified studies.</p>
+                    
+                    <ul>
+                        
+                        <li><strong>Recruiting:</strong> 2 studies</li>
+                        
+                        <li><strong>Completed:</strong> 10 studies</li>
+                        
+                        <li><strong>Active, not recruiting:</strong> 1 studies</li>
+                        
+                        <li><strong>Withdrawn:</strong> 2 studies</li>
+                        
+                    </ul>
+                    
+
+                    <div class="footer">
+                        <div>CONFIDENTIAL • TestMolecule (Report Verify)</div>
+                        <div>Page 5</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PAGE 6: PATENT LANDSCAPE -->
+            <div class="page">
+                <div class="content-wrapper">
+                    <div class="header">
+                        <div class="header-title" style="font-size: 20pt; font-weight: 700; color: var(--primary);">Intellectual Property & Legal</div>
+                        <div style="text-align: right; color: var(--secondary);">Page 6</div>
+                    </div>
+
+                    <h2>Core Patent Status</h2>
+                    
+                    <div style="background: #F8FAFC; padding: 20px; margin-bottom: 30px; border-radius: 4px;">
+                        <div class="cols-2">
+                            <div>
+                                <div class="metric-lbl">Primary Patent</div>
+                                <div style="font-size: 12pt; font-weight: 600;">US-9876543-B2</div>
+                            </div>
+                            <div>
+                                <div class="metric-lbl">Expiry</div>
+                                <div style="font-size: 12pt; font-weight: 600;">2025</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                    <h3>Patent Family Landscape</h3>
+                    
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Family ID</th>
+                                <th>Title/Subject</th>
+                                <th>Assignee</th>
+                                <th>Expiry</th>
+                                <th>Relevance</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            <tr>
+                                <td>FAM-001</td>
+                                <td>Crystalline Form Alpha</td>
+                                <td>OrigCo</td>
+                                <td>2026</td>
+                                <td>
+                                    <span class="tag tag-red">High</span>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>FAM-002</td>
+                                <td>Method of treating rare disease X</td>
+                                <td>CompetitorY</td>
+                                <td>2030</td>
+                                <td>
+                                    <span class="tag tag-blue">Medium</span>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>FAM-003</td>
+                                <td>Liquid Formulation</td>
+                                <td>GenericZ</td>
+                                <td>2028</td>
+                                <td>
+                                    <span class="tag tag-blue">Low</span>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>FAM-004</td>
+                                <td>Extended Release Profile</td>
+                                <td>OrigCo</td>
+                                <td>2024</td>
+                                <td>
+                                    <span class="tag tag-red">High</span>
+                                </td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                    
+                    
+                     <h3>Claims Analysis</h3>
+                    
+                    <ul>
+                    
+                        <li style="margin-bottom: 8px;">
+                            <strong>Composition:</strong> Expired — <span style="font-style: italic;">Broad structure claim covering the core molecule.</span>
+                        </li>
+                    
+                        <li style="margin-bottom: 8px;">
+                            <strong>Method of Use:</strong> Active — <span style="font-style: italic;">Narrow claim specifically for indication Y.</span>
+                        </li>
+                    
+                        <li style="margin-bottom: 8px;">
+                            <strong>Process:</strong> Active — <span style="font-style: italic;">Specific manufacturing step for high purity.</span>
+                        </li>
+                    
+                    </ul>
+                    
+
+                    <div class="footer">
+                        <div>CONFIDENTIAL • TestMolecule (Report Verify)</div>
+                        <div>Page 6</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PAGE 7: SUPPLY CHAIN -->
+            <div class="page">
+                <div class="content-wrapper">
+                    <div class="header">
+                        <div class="header-title" style="font-size: 20pt; font-weight: 700; color: var(--primary);">Global Supply Chain</div>
+                        <div style="text-align: right; color: var(--secondary);">Page 7</div>
+                    </div>
+
+                   <h2>Supplier Network</h2>
+                   
+                   <table>
+                        <thead>
+                            <tr>
+                                <th>Tier</th>
+                                <th>Count</th>
+                                <th>Locations</th>
+                                <th>Reliability</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            <tr>
+                                <td>Tier 1</td>
+                                <td>3</td>
+                                <td>EU, USA</td>
+                                <td>High</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>Tier 2</td>
+                                <td>5</td>
+                                <td>India, China</td>
+                                <td>Medium</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>Tier 3</td>
+                                <td>4</td>
+                                <td>Global</td>
+                                <td>Variable</td>
+                            </tr>
+                            
+                        </tbody>
+                   </table>
+                   
+
+                   <h2>Logistics Routes & Risk</h2>
+                   
+                   <table>
+                        <thead>
+                            <tr>
+                                <th>Origin</th>
+                                <th>Destination</th>
+                                <th>Mode</th>
+                                <th>Transit Time</th>
+                                <th>Risk Profile</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            <tr>
+                                <td>Mumbai, IN</td>
+                                <td>Rotterdam, NL</td>
+                                <td>Sea</td>
+                                <td>25 days</td>
+                                <td>Low</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>Shanghai, CN</td>
+                                <td>Los Angeles, US</td>
+                                <td>Sea</td>
+                                <td>18 days</td>
+                                <td>Medium</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>Basel, CH</td>
+                                <td>New York, US</td>
+                                <td>Air</td>
+                                <td>2 days</td>
+                                <td>Low</td>
+                            </tr>
+                            
+                        </tbody>
+                   </table>
+                   
+
+                    <div class="footer">
+                        <div>CONFIDENTIAL • TestMolecule (Report Verify)</div>
+                        <div>Page 7</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PAGE 8: STRATEGIC CONCLUSIONS -->
+            <div class="page">
+                <div class="content-wrapper">
+                    <div class="header">
+                        <div class="header-title" style="font-size: 20pt; font-weight: 700; color: var(--primary);">Strategic Conclusions</div>
+                        <div style="text-align: right; color: var(--secondary);">Page 8</div>
+                    </div>
+
+                    <h2>SWOT Analysis</h2>
+                    
+                    <div class="cols-2" style="margin-bottom: 30px;">
+                        <div style="background: #f1f5f9; padding: 20px; border-radius: 4px;">
+                            <h3 style="margin-top:0; color: #0f172a;">Strengths</h3>
+                            <ul style="margin: 0; padding-left: 20px;">
+                                <li>High bioavailability</li><li>Established safety profile</li><li>Low manufacturing cost</li>
+                            </ul>
+                        </div>
+                        <div style="background: #fff1f2; padding: 20px; border-radius: 4px;">
+                            <h3 style="margin-top:0; color: #991b1b;">Weaknesses</h3>
+                            <ul style="margin: 0; padding-left: 20px;">
+                                <li>Expired primary patent</li><li>Generic competition</li><li>Twice daily dosing</li>
+                            </ul>
+                        </div>
+                         <div style="background: #f0fdf4; padding: 20px; border-radius: 4px;">
+                            <h3 style="margin-top:0; color: #166534;">Opportunities</h3>
+                            <ul style="margin: 0; padding-left: 20px;">
+                                <li>Pediatric orphan indication</li><li>Emerging markets expansion</li><li>Combination therapy</li>
+                            </ul>
+                        </div>
+                         <div style="background: #fefce8; padding: 20px; border-radius: 4px;">
+                            <h3 style="margin-top:0; color: #854d0e;">Threats</h3>
+                            <ul style="margin: 0; padding-left: 20px;">
+                                <li>New mechanism of action competitors</li><li>Regulatory price controls</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+
+                    <h2>Final Recommendation</h2>
+                    <p style="font-size: 11pt; line-height: 1.8;">
+                        Based on the comprehensive analysis of market dynamics, clinical feasibility, and intellectual property landscape, 
+                        <strong>TestMolecule (Report Verify)</strong> represents a viable candidate for repurposing. The market indicators suggest robust demand 
+                        growth, particularly in the identified secondary indications. While generic competition poses a pricing challenge, 
+                        differentiation through novel formulations or specific method-of-use patents offers a clear pathway to value creation.
+                    </p>
+                    <p style="font-size: 11pt; line-height: 1.8;">
+                        It is recommended to proceed with <strong>Phase II</strong> validation studies focusing on the highest-potential 
+                        indication identified in the clinical scan, while simultaneously initiating supplier qualification audits to secure the supply chain.
+                    </p>
+
+                    <div style="margin-top: 60px; border-top: 1px solid #ccc; padding-top: 20px; display: flex; justify-content: space-between;">
+                        <div>
+                            <strong>Approved By:</strong><br><br>__________________________<br>Chief Scientific Officer
+                        </div>
+                        <div>
+                            <strong>Date:</strong><br><br>__________________________
+                        </div>
+                    </div>
+
+                    <div class="footer">
+                        <div>CONFIDENTIAL • TestMolecule (Report Verify)</div>
+                        <div>Page 8</div>
+                    </div>
+                </div>
+            </div>
+
+        </body>
+        </html>
+        

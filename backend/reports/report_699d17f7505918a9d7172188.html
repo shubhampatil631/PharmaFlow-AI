@@ -1,0 +1,657 @@
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>Repurposing Report: Doxycycline</title>
+            <style>
+                @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+                
+                :root {
+                    --primary: #0F172A;
+                    --secondary: #334155;
+                    --accent: #2563EB;
+                    --accent-light: #EFF6FF;
+                    --text-body: #475569;
+                    --border: #E2E8F0;
+                }
+
+                @page { margin: 0; size: A4; }
+                
+                body {
+                    font-family: 'Inter', sans-serif;
+                    color: var(--text-body);
+                    line-height: 1.5;
+                    margin: 0;
+                    background: #fff;
+                    font-size: 10pt;
+                }
+
+                .page {
+                    position: relative;
+                    width: 210mm;
+                    margin: 0 auto;
+                    background: white;
+                    padding: 0;
+                    overflow: visible;
+                    border-bottom: 1px solid #eee; /* Preview separator */
+                    page-break-inside: avoid;
+                    page-break-after: always;
+                }
+                
+                @media print {
+                    .page { width: 100%; border: none; }
+                }
+
+                /* Layouts */
+                .content-wrapper { padding: 40px 50px 100px 50px; }
+                .cols-2 { display: flex; gap: 40px; justify-content: space-between; }
+                .cols-2 > div { flex: 1; box-sizing: border-box; }
+                .grid-3 { display: flex; gap: 20px; justify-content: space-between; }
+                .grid-3 > div { flex: 1; box-sizing: border-box; }
+
+                /* Text */
+                h1 { font-size: 24pt; color: var(--primary); margin: 0; line-height: 1.2; }
+                h2 { font-size: 16pt; color: var(--primary); border-bottom: 2px solid var(--border); padding-bottom: 10px; margin-top: 40px; margin-bottom: 25px; page-break-after: avoid; }
+                h3 { font-size: 12pt; color: var(--secondary); font-weight: 600; margin-top: 25px; margin-bottom: 10px; page-break-after: avoid; }
+                p { margin-bottom: 12px; text-align: justify; }
+
+                /* Components */
+                .header { display: flex; justify-content: space-between; border-bottom: 2px solid var(--primary); padding-bottom: 15px; margin-bottom: 30px; }
+                .footer { display: flex; justify-content: space-between; font-size: 8pt; color: #94A3B8; border-top: 1px solid var(--border); padding-top: 15px; margin-top: 50px; page-break-inside: avoid; }
+                
+                table { width: 100%; border-collapse: collapse; font-size: 9pt; margin-bottom: 20px; }
+                th { text-align: left; background: var(--primary); color: white; padding: 10px; font-weight: 500; font-size: 8pt; text-transform: uppercase; }
+                td { padding: 10px; border-bottom: 1px solid var(--border); vertical-align: top; }
+                tr:nth-child(even) { background: #F8FAFC; }
+
+                .metric-card { background: var(--accent-light); padding: 20px; border-radius: 8px; border-left: 4px solid var(--accent); }
+                .metric-val { font-size: 20pt; font-weight: 700; color: var(--primary); margin-top: 5px; }
+                .metric-lbl { font-size: 9pt; text-transform: uppercase; color: var(--secondary); font-weight: 600; }
+
+                .tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 8pt; font-weight: 600; }
+                .tag-green { background: #DCFCE7; color: #166534; }
+                .tag-blue { background: #DBEAFE; color: #1E40AF; }
+                .tag-red { background: #FEE2E2; color: #991B1B; }
+
+                /* Cover specific */
+                .cover { display: flex; min-height: 290mm; page-break-after: always; }
+                .cover-side { width: 80mm; flex-shrink: 0; background: var(--primary); color: white; padding: 60px 40px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between; }
+                .cover-main { flex: 1; padding: 80px 50px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: center; }
+            </style>
+        </head>
+        <body>
+            
+            <!-- PAGE 1: COVER -->
+            <div class="page text-gray-900">
+                <div class="cover">
+                    <div class="cover-side">
+                        <div>
+                            <div style="font-size: 16pt; font-weight: 700; border-bottom: 2px solid var(--accent); padding-bottom: 20px; margin-bottom: 40px;">PHARMAFLOW INTELLIGENCE</div>
+                            <div style="margin-bottom: 30px;">
+                                <div style="font-size: 8pt; opacity: 0.7; text-transform: uppercase;">Report Type</div>
+                                <div style="font-size: 12pt; font-weight: 500;">Comprehensive Repurposing Scan</div>
+                            </div>
+                            <div style="margin-bottom: 30px;">
+                                <div style="font-size: 8pt; opacity: 0.7; text-transform: uppercase;">Molecule</div>
+                                <div style="font-size: 12pt; font-weight: 500;">Doxycycline</div>
+                            </div>
+                            <div>
+                                <div style="font-size: 8pt; opacity: 0.7; text-transform: uppercase;">Date</div>
+                                <div style="font-size: 12pt; font-weight: 500;">2026-02-24</div>
+                            </div>
+                        </div>
+                        <div style="font-size: 9pt; opacity: 0.5;">Confidential & Proprietary<br>Generated by PharmaFlow AI System</div>
+                    </div>
+                    <div class="cover-main">
+                        <div style="width: 8px; height: 100px; background: var(--accent); margin-bottom: 30px;"></div>
+                        <h1 style="font-size: 36pt; letter-spacing: -1px; margin-bottom: 20px; overflow-wrap: break-word; word-break: break-word; line-height: 1.1;">Doxycycline</h1>
+                        <div style="font-size: 20pt; color: var(--secondary); font-weight: 300;">Strategic Analysis & Market Viability Report</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PAGE 2: EXECUTIVE SUMMARY -->
+            <div class="page">
+                <div class="content-wrapper">
+                    <div class="header">
+                        <div class="header-title" style="font-size: 20pt; font-weight: 700; color: var(--primary);">Executive Briefing</div>
+                        <div style="text-align: right; color: var(--secondary);">Page 2</div>
+                    </div>
+
+                    <div class="grid-3" style="margin-bottom: 40px;">
+                        
+                        <div class="metric-card">
+                            <div class="metric-lbl">Market Maturity</div>
+                            <div class="metric-val" style="font-size: 14pt;">Mature</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-lbl">Vendor Availability</div>
+                            <div class="metric-val" style="font-size: 14pt;">5 Public Vendors</div>
+                        </div>
+                        
+                        <div class="metric-card">
+                            <div class="metric-lbl">Patent Status</div>
+                            <div class="metric-val" style="font-size: 11pt; margin-top: 12px; line-height: 1.2;">
+                                
+                                    Doxycycline is currently generic, as its patent expired many years ago.
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>Key Findings</h2>
+                    <div style="background: #f8fafc; padding: 25px; border-left: 5px solid var(--primary); margin-bottom: 30px; border-radius: 4px;">
+                        <p style="font-size: 11pt; color: #1e293b; white-space: pre-wrap;"><strong>Summary:</strong> Doxycycline is a mature generic antibiotic with a long history of use. Its patent has expired, and it is widely available in various formulations and strengths from multiple manufacturers. The drug has been extensively studied and utilized for the treatment of various infections. Currently, there are two active clinical trials investigating the use of Doxycycline in different conditions, including COVID-19, infection, chronic endometritis, relapsing fever, and intrauterine adhesion. The presence of these trials suggests that researchers are still exploring the potential of Doxycycline in new therapeutic areas. Additionally, there have been five recent publications related to Doxycycline, indicating ongoing interest in the scientific community. However, as a generic drug, Doxycycline faces significant challenges in terms of differentiation and market competition. Any potential strategy for repurposing or repositioning Doxycycline would need to take into account the existing market landscape and the need for new intellectual property (IP) to create a competitive advantage.</p>
+                    </div>
+
+                    <div class="cols-2">
+                        <div>
+                            <h3>Strategic Drivers</h3>
+                            <ul style="padding-left: 20px;">
+                                
+                                    
+                                    <li style="margin-bottom: 8px;">Repurposing potentials</li>
+                                    
+                                
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>Critical Risks</h3>
+                            <ul style="padding-left: 20px; color: #b91c1c;">
+                                
+                                    
+                                    <li style="margin-bottom: 8px;">Regulatory changes</li>
+                                    
+                                
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="footer">
+                        <div>CONFIDENTIAL • Doxycycline</div>
+                        <div>Page 2</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PAGE 3: MARKET INTELLIGENCE -->
+            <div class="page">
+                <div class="content-wrapper">
+                    <div class="header">
+                        <div class="header-title" style="font-size: 20pt; font-weight: 700; color: var(--primary);">Market Intelligence</div>
+                        <div style="text-align: right; color: var(--secondary);">Page 3</div>
+                    </div>
+
+                    <h2>Market Structure</h2>
+                    
+                    <p style="font-size: 11pt; border-left: 3px solid var(--accent); padding-left: 15px;">
+                        Doxycycline is a mature generic drug, with its patent having expired long ago. It is widely available in various formulations and strengths from multiple manufacturers.
+                    </p>
+                    
+
+                    <h2>Key Global Manufacturers</h2>
+                    <p>Major players identified in this therapeutic area:</p>
+                    
+                    <ul style="columns: 2;">
+                        
+                        <li style="margin-bottom: 10px; font-weight: 500;">Pfizer</li>
+                        
+                        <li style="margin-bottom: 10px; font-weight: 500;">Mylan</li>
+                        
+                        <li style="margin-bottom: 10px; font-weight: 500;">Teva Pharmaceutical Industries</li>
+                        
+                        <li style="margin-bottom: 10px; font-weight: 500;">Sandoz</li>
+                        
+                        <li style="margin-bottom: 10px; font-weight: 500;">Akorn</li>
+                        
+                    </ul>
+                    
+
+                    <div class="footer">
+                        <div>CONFIDENTIAL • Doxycycline</div>
+                        <div>Page 3</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- PAGE 4: SCIENTIFIC LITERATURE -->
+            <div class="page">
+                <div class="content-wrapper">
+                    <div class="header">
+                        <div class="header-title" style="font-size: 20pt; font-weight: 700; color: var(--primary);">Scientific Literature Review</div>
+                        <div style="text-align: right; color: var(--secondary);">Page 4</div>
+                    </div>
+
+                    <h2>Key Publications</h2>
+                    <p>The following peer-reviewed articles were identified as high-relevance for the repurposing hypothesis:</p>
+                    
+                    
+                        
+                        <div style="margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 15px;">
+                            <div style="font-weight: 600; color: var(--accent); margin-bottom: 4px;">Chelating anticoagulants reduce plasma doxycycline measurements: implications for doxy PEP monitoring.</div>
+                            <div style="font-size: 8pt; color: #64748B; margin-bottom: 6px;">Expert review of clinical pharmacology • 2026 • PMID: 41701614</div>
+                            <div style="font-size: 9pt; color: #334155; font-style: italic;">“<h4>Background</h4>Doxycycline post-exposure prophylaxis is recommended for men who have sex with men at high risk for sexually transmitted infections. Accurate doxycycline measures ensure...”</div>
+                        </div>
+                        
+                        <div style="margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 15px;">
+                            <div style="font-weight: 600; color: var(--accent); margin-bottom: 4px;">Ivermectin and Doxycycline combination as a promising anti-viral drug candidate: an in-silico and DFT study.</div>
+                            <div style="font-size: 8pt; color: #64748B; margin-bottom: 6px;">In silico pharmacology • 2026 • PMID: 41717425</div>
+                            <div style="font-size: 9pt; color: #334155; font-style: italic;">“In contemporary area of medical research, repurposing of drugs has emerged as a promising strategy in drug discovery against viral infections in individual or in combination modes....”</div>
+                        </div>
+                        
+                        <div style="margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 15px;">
+                            <div style="font-weight: 600; color: var(--accent); margin-bottom: 4px;">Trends in Chlamydia Prescribing Practices After Changes to National Treatment Guidelines in the United States, 2016-2023.</div>
+                            <div style="font-size: 8pt; color: #64748B; margin-bottom: 6px;">Sexually transmitted diseases • 2026 • PMID: 41082782</div>
+                            <div style="font-size: 9pt; color: #334155; font-style: italic;">“<h4>Background</h4>In 2021, the US Centers for Disease Control and Prevention revised Chlamydia trachomatis (CT) treatment guidelines to recommend only doxycycline as first line-therapy, instead...”</div>
+                        </div>
+                        
+                        <div style="margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 15px;">
+                            <div style="font-weight: 600; color: var(--accent); margin-bottom: 4px;">Timing and efficacy of doxycycline in macrolide-resistant &lt;i&gt;Mycoplasma pneumoniae&lt;/i&gt; pneumonia in children: a single-center retrospective study.</div>
+                            <div style="font-size: 8pt; color: #64748B; margin-bottom: 6px;">Frontiers in public health • 2026 • PMID: 41717612</div>
+                            <div style="font-size: 9pt; color: #334155; font-style: italic;">“<h4>Background</h4>Outbreaks of macrolide-resistant <i>Mycoplasma pneumoniae</i> (MRMP) in children have posed ongoing treatment challenges. This study aimed to assess the efficacy of doxycycline...”</div>
+                        </div>
+                        
+                        <div style="margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 15px;">
+                            <div style="font-weight: 600; color: var(--accent); margin-bottom: 4px;">Post-Exposure Prophylaxis Prescribing Practices in a Lyme Disease-Endemic Area.</div>
+                            <div style="font-size: 8pt; color: #64748B; margin-bottom: 6px;">Infectious disease reports • 2026 • PMID: 41718073</div>
+                            <div style="font-size: 9pt; color: #334155; font-style: italic;">“<h4>Background/objectives</h4>The 2020 Infectious Diseases Society of America (IDSA) guidelines recommend a single 200 mg dose of doxycycline within 72 h of tick removal after a high-risk bite for...”</div>
+                        </div>
+                        
+                    
+
+                    <div class="footer">
+                        <div>CONFIDENTIAL • Doxycycline</div>
+                        <div>Page 4</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PAGE 5: CLINICAL TRIALS -->
+            <div class="page">
+                <div class="content-wrapper">
+                    <div class="header">
+                        <div class="header-title" style="font-size: 20pt; font-weight: 700; color: var(--primary);">Clinical Development</div>
+                        <div style="text-align: right; color: var(--secondary);">Page 5</div>
+                    </div>
+
+                    <h2>Active & Recruiting Trials</h2>
+                    
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="width: 40%">Study Title</th>
+                                <th>NCT ID</th>
+                                <th>Phase</th>
+                                <th>Status</th>
+                                <th>Conditions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            <tr>
+                                <td>Intralesional Voriconazole, or Intralesional Cryotherapy, or Oral...</td>
+                                <td><a href="https://clinicaltrials.gov/study/NCT05708625" target="_blank" style="color: var(--accent); text-decoration: none;">NCT05708625</a></td>
+                                <td>PHASE3</td>
+                                <td>
+                                    <span class="tag tag-blue">UNKNOWN</span>
+                                </td>
+                                <td>Leishmaniasis, Cutaneous</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>Doxycycline to Upgrade Organ Response in Light Chain (AL) Amyloidosis Trial</td>
+                                <td><a href="https://clinicaltrials.gov/study/NCT02207556" target="_blank" style="color: var(--accent); text-decoration: none;">NCT02207556</a></td>
+                                <td>PHASE2</td>
+                                <td>
+                                    <span class="tag tag-blue">COMPLETED</span>
+                                </td>
+                                <td>Primary Systemic Amyloidosis</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>Comparison Between aPDT and Systemic Doxycycline on Non-surgical...</td>
+                                <td><a href="https://clinicaltrials.gov/study/NCT01595594" target="_blank" style="color: var(--accent); text-decoration: none;">NCT01595594</a></td>
+                                <td>PHASE3</td>
+                                <td>
+                                    <span class="tag tag-blue">COMPLETED</span>
+                                </td>
+                                <td>Periodontal Disease, Type 2 Diabetes</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>Azithromycin Compared With Doxycycline for Treating Anorectal...</td>
+                                <td><a href="https://clinicaltrials.gov/study/NCT03532464" target="_blank" style="color: var(--accent); text-decoration: none;">NCT03532464</a></td>
+                                <td>PHASE4</td>
+                                <td>
+                                    <span class="tag tag-blue">UNKNOWN</span>
+                                </td>
+                                <td>Chlamydia Trachomatis Infection,...</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>Doxycycline for Elbow Tendinopathy</td>
+                                <td><a href="https://clinicaltrials.gov/study/NCT04686799" target="_blank" style="color: var(--accent); text-decoration: none;">NCT04686799</a></td>
+                                <td>PHASE1</td>
+                                <td>
+                                    <span class="tag tag-blue">ACTIVE_NOT_RECRUITING</span>
+                                </td>
+                                <td>Lateral Epicondylitis, Lateral...</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>Omega-3 Pufa and Aspirin as Adjunctive Therapy in Treatment of...</td>
+                                <td><a href="https://clinicaltrials.gov/study/NCT07385300" target="_blank" style="color: var(--accent); text-decoration: none;">NCT07385300</a></td>
+                                <td>NA</td>
+                                <td>
+                                    <span class="tag tag-blue">COMPLETED</span>
+                                </td>
+                                <td>Periodontitis, Diabete Mellitus</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>Doxycycline in Treatment of Bleeding With Depot...</td>
+                                <td><a href="https://clinicaltrials.gov/study/NCT01254799" target="_blank" style="color: var(--accent); text-decoration: none;">NCT01254799</a></td>
+                                <td>PHASE3</td>
+                                <td>
+                                    <span class="tag tag-blue">COMPLETED</span>
+                                </td>
+                                <td>Uterine Hemorrhage</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>The Effect of Doxycycline on Matrix Metalloproteinase Expression...</td>
+                                <td><a href="https://clinicaltrials.gov/study/NCT00538967" target="_blank" style="color: var(--accent); text-decoration: none;">NCT00538967</a></td>
+                                <td>PHASE2</td>
+                                <td>
+                                    <span class="tag tag-blue">COMPLETED</span>
+                                </td>
+                                <td>Aortic Aneurysm, Abdominal</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>A Pilot of Pediatric/Adult Study of Gene Expression Profiling and...</td>
+                                <td><a href="https://clinicaltrials.gov/study/NCT00353158" target="_blank" style="color: var(--accent); text-decoration: none;">NCT00353158</a></td>
+                                <td>PHASE1</td>
+                                <td>
+                                    <span class="tag tag-blue">COMPLETED</span>
+                                </td>
+                                <td>Healthy Volunteers, Fungal...</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>A Prospective Trial of Nasal Mupirocin, Hexachlorophene Body Wash,...</td>
+                                <td><a href="https://clinicaltrials.gov/study/NCT01049438" target="_blank" style="color: var(--accent); text-decoration: none;">NCT01049438</a></td>
+                                <td>NA</td>
+                                <td>
+                                    <span class="tag tag-blue">COMPLETED</span>
+                                </td>
+                                <td>Methicillin Resistant Staphylococcus...</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>RepurpoSing Old Drugs TO SuppRess a Modern Threat: COVID-19 STORM</td>
+                                <td><a href="https://clinicaltrials.gov/study/NCT04433078" target="_blank" style="color: var(--accent); text-decoration: none;">NCT04433078</a></td>
+                                <td>PHASE2</td>
+                                <td>
+                                    <span class="tag tag-blue">WITHDRAWN</span>
+                                </td>
+                                <td>Cytokine Storm, SARS-CoV-2</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>Non-Invasive Treatment of Abdominal Aortic Aneurysm Clinical Trial</td>
+                                <td><a href="https://clinicaltrials.gov/study/NCT01756833" target="_blank" style="color: var(--accent); text-decoration: none;">NCT01756833</a></td>
+                                <td>PHASE2</td>
+                                <td>
+                                    <span class="tag tag-blue">COMPLETED</span>
+                                </td>
+                                <td>Aneurysm</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>Effectiveness of Ivermectin and Doxycycline on COVID-19 Patients</td>
+                                <td><a href="https://clinicaltrials.gov/study/NCT04591600" target="_blank" style="color: var(--accent); text-decoration: none;">NCT04591600</a></td>
+                                <td>PHASE1, PHASE2</td>
+                                <td>
+                                    <span class="tag tag-blue">COMPLETED</span>
+                                </td>
+                                <td>Covid19</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>Single Dose Azithromycin in the Treatment of Adult Cholera</td>
+                                <td><a href="https://clinicaltrials.gov/study/NCT00229944" target="_blank" style="color: var(--accent); text-decoration: none;">NCT00229944</a></td>
+                                <td>PHASE3</td>
+                                <td>
+                                    <span class="tag tag-blue">COMPLETED</span>
+                                </td>
+                                <td>Cholera</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>Development of an Optimal Antibiotic Regime for Long-term Therapy...</td>
+                                <td><a href="https://clinicaltrials.gov/study/NCT01398072" target="_blank" style="color: var(--accent); text-decoration: none;">NCT01398072</a></td>
+                                <td>PHASE3</td>
+                                <td>
+                                    <span class="tag tag-blue">UNKNOWN</span>
+                                </td>
+                                <td>Chronic Obstructive Pulmonary Disease (COPD).</td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                    
+                    
+                    <h2>Recruitment Analysis</h2>
+                    <p>Overview of the current recruitment status across identified studies.</p>
+                    
+                    <ul>
+                        
+                        <li><strong>UNKNOWN:</strong> 7 studies</li>
+                        
+                        <li><strong>COMPLETED:</strong> 30 studies</li>
+                        
+                        <li><strong>ACTIVE_NOT_RECRUITING:</strong> 3 studies</li>
+                        
+                        <li><strong>WITHDRAWN:</strong> 4 studies</li>
+                        
+                        <li><strong>NOT_YET_RECRUITING:</strong> 3 studies</li>
+                        
+                        <li><strong>RECRUITING:</strong> 2 studies</li>
+                        
+                        <li><strong>TERMINATED:</strong> 1 studies</li>
+                        
+                    </ul>
+                    
+
+                    <div class="footer">
+                        <div>CONFIDENTIAL • Doxycycline</div>
+                        <div>Page 5</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PAGE 6: PATENT LANDSCAPE -->
+            <div class="page">
+                <div class="content-wrapper">
+                    <div class="header">
+                        <div class="header-title" style="font-size: 20pt; font-weight: 700; color: var(--primary);">Intellectual Property & Legal</div>
+                        <div style="text-align: right; color: var(--secondary);">Page 6</div>
+                    </div>
+
+                    <h2>Core Patent Status</h2>
+                    
+                    <div style="background: #F8FAFC; padding: 20px; margin-bottom: 30px; border-radius: 4px;">
+                        <div class="cols-2">
+                            <div>
+                                <div class="metric-lbl">Primary Patent</div>
+                                <div style="font-size: 12pt; font-weight: 600;">Pioneer/Historical Patent</div>
+                            </div>
+                            <div>
+                                <div class="metric-lbl">Expiry</div>
+                                <div style="font-size: 12pt; font-weight: 600;">1982</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                    <h3>Patent Family Landscape</h3>
+                    
+                    
+                     <h3>Claims Analysis</h3>
+                    
+                    <ul>
+                    
+                        <li style="margin-bottom: 8px;">
+                            <strong>Composition of Matter:</strong> Determined by Expiry — <span style="font-style: italic;">Broad synthesis claims</span>
+                        </li>
+                    
+                    </ul>
+                    
+
+                    <div class="footer">
+                        <div>CONFIDENTIAL • Doxycycline</div>
+                        <div>Page 6</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PAGE 7: SUPPLY CHAIN -->
+            <div class="page">
+                <div class="content-wrapper">
+                    <div class="header">
+                        <div class="header-title" style="font-size: 20pt; font-weight: 700; color: var(--primary);">Global Supply Chain</div>
+                        <div style="text-align: right; color: var(--secondary);">Page 7</div>
+                    </div>
+
+                   <h2>Registered Vendors (PubChem)</h2>
+                   <p>Publicly listed chemical vendors and suppliers:</p>
+                   
+                   <table>
+                        <thead>
+                            <tr>
+                                <th>Vendor Name</th>
+                                <th>Source Type</th>
+                                <th>Verified</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            <tr>
+                                <td style="font-weight: 600;">Mylan</td>
+                                <td>Major Global Supplier</td>
+                                <td>
+                                    <span class="tag tag-gray">LLM Synthesized</span>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td style="font-weight: 600;">Pfizer</td>
+                                <td>Major Global Supplier</td>
+                                <td>
+                                    <span class="tag tag-gray">LLM Synthesized</span>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td style="font-weight: 600;">Sandoz</td>
+                                <td>Major Global Supplier</td>
+                                <td>
+                                    <span class="tag tag-gray">LLM Synthesized</span>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td style="font-weight: 600;">Teva Pharmaceutical Industries</td>
+                                <td>Major Global Supplier</td>
+                                <td>
+                                    <span class="tag tag-gray">LLM Synthesized</span>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td style="font-weight: 600;">Zydus Cadila</td>
+                                <td>Major Global Supplier</td>
+                                <td>
+                                    <span class="tag tag-gray">LLM Synthesized</span>
+                                </td>
+                            </tr>
+                            
+                        </tbody>
+                   </table>
+                   
+
+
+
+                    <div class="footer">
+                        <div>CONFIDENTIAL • Doxycycline</div>
+                        <div>Page 7</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PAGE 8: STRATEGIC CONCLUSIONS -->
+            <div class="page">
+                <div class="content-wrapper">
+                    <div class="header">
+                        <div class="header-title" style="font-size: 20pt; font-weight: 700; color: var(--primary);">Strategic Conclusions</div>
+                        <div style="text-align: right; color: var(--secondary);">Page 8</div>
+                    </div>
+
+                    <h2>SWOT Analysis</h2>
+                    
+                    <div class="cols-2" style="margin-bottom: 30px;">
+                        <div style="background: #f1f5f9; padding: 20px; border-radius: 4px;">
+                            <h3 style="margin-top:0; color: #0f172a;">Strengths</h3>
+                            <ul style="margin: 0; padding-left: 20px;">
+                                <li>Targeting matrix metallopeptidase 13</li><li>Targeting matrix metallopeptidase 7</li>
+                            </ul>
+                        </div>
+                        <div style="background: #fff1f2; padding: 20px; border-radius: 4px;">
+                            <h3 style="margin-top:0; color: #991b1b;">Weaknesses</h3>
+                            <ul style="margin: 0; padding-left: 20px;">
+                                <li>Requires competitive pricing analysis</li>
+                            </ul>
+                        </div>
+                         <div style="background: #f0fdf4; padding: 20px; border-radius: 4px;">
+                            <h3 style="margin-top:0; color: #166534;">Opportunities</h3>
+                            <ul style="margin: 0; padding-left: 20px;">
+                                <li>Repurposing potentials</li>
+                            </ul>
+                        </div>
+                         <div style="background: #fefce8; padding: 20px; border-radius: 4px;">
+                            <h3 style="margin-top:0; color: #854d0e;">Threats</h3>
+                            <ul style="margin: 0; padding-left: 20px;">
+                                <li>Regulatory changes</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+
+                    <h2>Final Recommendation</h2>
+                    <div style="background: #f8fafc; padding: 25px; border-radius: 8px; border-left: 5px solid var(--accent); margin-bottom: 30px;">
+                        <p style="font-size: 11pt; line-height: 1.6; color: #1e293b; margin: 0; white-space: pre-wrap;">
+                            Given the current landscape, repurposing Doxycycline for new indications may be challenging due to its generic status and the resulting difficulty in differentiating it from existing products. However, the presence of two active clinical trials suggests that there may still be opportunities for innovation, particularly if new formulations or delivery methods can be developed that offer improved efficacy, safety, or convenience. To create a viable business strategy, it would be essential to focus on developing new IP, such as novel formulations or combination products, that can provide a competitive advantage in the market. Additionally, any repurposing efforts should be supported by robust clinical evidence and a thorough understanding of the target market and competition. While the existing publications and ongoing trials provide some evidence of Doxycycline's potential, it is crucial to approach any repurposing strategy with a critical and nuanced perspective, recognizing both the opportunities and challenges associated with this mature generic drug. Therefore, a potential strategic recommendation could be to explore the development of new formulations or combination products that leverage Doxycycline's existing efficacy and safety profile while creating new IP and competitive advantages. This approach would require significant investment in research and development, as well as a thorough analysis of the market and competition, to determine the viability of such a strategy.
+                        </p>
+                    </div>
+
+                    <div style="margin-top: 60px; border-top: 1px solid #ccc; padding-top: 20px; display: flex; justify-content: space-between;">
+                        <div>
+                            <strong>Approved By:</strong><br><br>__________________________<br>Chief Scientific Officer
+                        </div>
+                        <div>
+                            <strong>Date:</strong><br><br>__________________________
+                        </div>
+                    </div>
+
+                    <div class="footer">
+                        <div>CONFIDENTIAL • Doxycycline</div>
+                        <div>Page 8</div>
+                    </div>
+                </div>
+            </div>
+
+        </body>
+        </html>
+        
